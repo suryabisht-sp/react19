@@ -41,14 +41,20 @@ const Header = () => {
 
 
   return (
-    <>   
+    <div className='header-main'>   
      <div>Real Virtual</div>
-     <input className='input' value={name} onChange={(event) => setName(event.target.value)} />
-      <button className='button' onClick={handleSubmit} disabled={isPending}>
+     <div className='header-main2'>
+     <div className='header-main1'>
+     <input className='input' value={name} onChange={(event) => setName(event.target.value)} placeholder='Enter here to test UseTransition' />
+      <button className='button1' onClick={handleSubmit} disabled={isPending}>
         Update
       </button>
+     
+      </div>
       {error && <p>{error}</p>}
-    </>
+      </div>
+     
+    </div>
 
   )
 }
