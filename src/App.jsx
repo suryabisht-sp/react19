@@ -6,6 +6,7 @@ import data from "./utility/Data.json"
 import Card from './component/Card'
 import ListItems from './component/List'
 import Header from './component/Header'
+import Common from './component/Hooks/Common_oldWay'
 
 function App() {
   const [time, setTime] = useState({ hours: '', minutes: '', seconds: '', formattedDate: '', period: '' });
@@ -75,18 +76,19 @@ function App() {
 
   return (
     <>
-      <div className='header'>
+    <Common/>
+      {/* <div className='header'>
         <Header />
       </div>
       <h2 className='date-time'>
         <span style={timeStyle(getDateColor())}> {time.formattedDate}</span>{" "} -  {" "}
         <span style={timeStyle(getHoursColor())}>{time.hours}</span>:
         <span style={timeStyle(getMinutesColor())}>{time.minutes}</span>:
-        <span style={timeStyle(getSecondsColor())}>{time.seconds}</span> {time.period}
+        <span className="seconds"  style={timeStyle(getSecondsColor())}>{time.seconds}</span> {time.period}
       </h2>
       <div className='container'>
         <ListItems />
-      </div>
+      </div> */}
     </>
   );
 }

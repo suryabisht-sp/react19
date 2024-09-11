@@ -144,3 +144,21 @@
   padding: 0 40px;
     color: rebeccapurple;
 }
+@keyframes turnAnimation {
+  0% {
+    transform: rotateX(50deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(40deg);
+    opacity: 1;
+  }
+}
+
+
+
+.seconds {
+  display: inline-block; /* Ensure element can be animated */
+  animation: turnAnimation 1s infinite;
+  transform-style: preserve-3d; /* Ensures no inversion is visible */
+}
